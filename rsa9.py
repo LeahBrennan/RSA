@@ -1,4 +1,12 @@
-#Code sourced from: https://github.com/BOAKGP/CTF-Writeups/blob/master/PicoCTF%202017/Level%203/Cryptography/Broadcast/main.py
+'''
+Bibliography:
+BOAKGP (2017), ‘CTF-Writeups/PicoCTF 2017/ Level 3/ Cryptography/ Broadcast/ main.py’,
+github, 25 June 2018,
+Available at: https://github.com/BOAKGP/CTF-Writeups/blob/master/PicoCTF%202017/Level%203/Cryptography/Broadcast/main.py
+(Accessed 28 February 2019).
+
+'''
+
 e = 3
 
 n1 = 1001191535967882284769094654562963158339094991366537360172618359025855097846977704928598237040115495676223744383629803332394884046043603063054821999994629411352862317941517957323746992871914047324555019615398720677218748535278252779545622933662625193622517947605928420931496443792865516592262228294965047903627
@@ -13,7 +21,16 @@ n3 = 120466438000941469763978286505877265314063668433667890186319602592805470672
 
 c3 = 311096000497881387953904724284440481805457233048982756757007020410000443330941053703716829538086459727079448020579354693958905904778381820371160626001594619419169121166486655254993091181369105737797409452734836563374374511516011594235202125201067840325349354834604004321427713901643355933701994777952169157646
 
-# from https://stackoverflow.com/questions/4798654/modular-multiplicative-inverse-function-in-python#9758173
+'''
+BOAKGP REFERENCE: 
+from: 
+dorserg (2011), 'Modular multiplicative inverse function in python, StackOverflow, January 25 2011,
+Available at: 
+https://stackoverflow.com/questions/4798654/modular-multiplicative-inverse-function-in-python#9758173
+(Accessed 17 April 2019).
+
+'''
+
 def egcd(a, b):
     if a == 0:
         return (b, 0, 1)
@@ -22,7 +39,14 @@ def egcd(a, b):
         return (g, x - (b // a) * y, y)
 
 
-# from https://stackoverflow.com/questions/4798654/modular-multiplicative-inverse-function-in-python#9758173
+
+'''
+BOAKGP REFERENCE: from:
+dorserg (2011), 'Modular multiplicative inverse function in python, StackOverflow, January 25 2011,
+Available at: 
+https://stackoverflow.com/questions/4798654/modular-multiplicative-inverse-function-in-python#9758173
+(Accessed 17 April 2019).
+'''
 def modinv(a, m):
     g, x, y = egcd(a, m)
     if g != 1:
@@ -37,8 +61,16 @@ t3 = c3 * (n1 * n2) * modinv(n1 * n2, n3)
 
 c = (t1 + t2 + t3) % (n1 * n2 * n3)
 
+'''
+BOAKGP REFERENCE: 
+from:
+col speed (2009), cube root, January 19 2009, python (online), 
+Available at:  
+http://python.6.x6.nabble.com/cube-root-tp1733498p1733529.html
+(Accessed 17 April 2019). 
 
-# from http://python.6.x6.nabble.com/cube-root-tp1733498p1733529.html
+'''
+
 def root3rd(x):
     y, y1 = None, 2
     while y != y1:
@@ -51,3 +83,4 @@ def root3rd(x):
 
 m = root3rd(c)
 print(bytearray.fromhex(hex(m).split('x')[1]).decode())
+

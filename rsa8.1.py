@@ -2,4 +2,12 @@ m = 5254424026348921331952182533441941939116895994646065104680895109333158086492
 print(hex(m))
 
 print(bytearray.fromhex(hex(m).split('x')[1]).decode())
-#Source: https://github.com/BOAKGP/CTF-Writeups/blob/master/PicoCTF%202017/Level%203/Cryptography/Broadcast/main.py
+
+'''
+Bibliography:
+BOAKGP (2017), ‘CTF-Writeups/PicoCTF 2017/ Level 3/ Cryptography/ Broadcast/ main.py’,
+github, 25 June 2018, 
+Available at: https://github.com/BOAKGP/CTF-Writeups/blob/master/PicoCTF%202017/Level%203/Cryptography/Broadcast/main.py
+(Accessed 28 February 2019).
+
+'''

@@ -36,12 +36,33 @@ print(m)
 
 print(hex(m))
 print(bytearray.fromhex(hex(m).split('x')[1]).decode())
-#Source: https://github.com/BOAKGP/CTF-Writeups/blob/master/PicoCTF%202017/Level%203/Cryptography/Broadcast/main.py
+
 
 #txt = '5468657265735f6d6f72655f7468616e5f6f6e655f7761795f746f5f525341'
 #join([chr(int(''.join(c), 16)) for c in zip(txt[0::2],txt[1::2])])
 #print(txt)
 
 #print(bytes.fromhex('0x54686f73652065787472612070726976617465206b65792076616c75657320617265206d65616e7420746f206d616b65206974206561736965723f'))
-#https://python-forum.io/Thread-convert-hex-encoded-string-to-ASCII
-#https://www.quora.com/How-do-I-convert-hex-into-a-string-using-Python
+
+
+
+'''
+Bibliography:
+BOAKGP (2017), ‘CTF-Writeups/PicoCTF 2017/ Level 3/ Cryptography/ Broadcast/ main.py’, 
+github, 25 June 2018, 
+Available at: https://github.com/BOAKGP/CTF-Writeups/blob/master/PicoCTF%202017/Level%203/Cryptography/Broadcast/main.py
+(Accessed 28 February 2019).
+
+Nissanov (2018), How do I convert hex into a string using Python?, 
+quora, 23 August 2018, 
+Available at: https://www.quora.com/How-do-I-convert-hex-into-a-string-using-Python 
+(Accessed 12 April 2019). 
+
+
+Skaparen (2016), convert hex encoded string to ASCII, 29 September 2016, Python Forum (online), 
+Available at: https://python-forum.io/Thread-convert-hex-encoded-string-to-ASCII 
+(Accessed 12 April 2019).
+
+'''
+
+

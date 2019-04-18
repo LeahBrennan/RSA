@@ -1,5 +1,5 @@
-#Sourced from: https://gist.github.com/ofaurax/6103869014c246f962ab30a513fb5b49
-#egcd has changed to egcd2 as similar code was used to solve level 5,both scripts were originally named egcd and egcd 2
+
+# egcd has changed to egcd2 as similar code was used to solve level 5,both scripts were originally named egcd and egcd 2
 
 p = 163598797232837275790583032413921422452851861145478369331976309880028992955089558380171554447759405365296693377570783300198791468861355639873166150884714034914366548252757855530548966926710596087588892893653952147784119788340592861717511574050564549916735627066568966135368285851889401719649796310308064172229
 
@@ -34,3 +34,13 @@ print('Phi =', phi)
 print('E =', e)
 print('D =', d)
 print('(E*D)%Phi =', (e*d)%phi)
+
+'''
+Bibliography: 
+Ofaurax (2016), ‘Modular Inverse for RSA in python’,
+github, 30 March 2016,
+Available at: https://gist.github.com/ofaurax/6103869014c246f962ab30a513fb5b49
+(Accessed 28 February 2019).
+'''
+
+

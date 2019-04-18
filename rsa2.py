@@ -34,3 +34,9 @@ print (ciphertext)
 decrypted = pow(ciphertext, d, n)   ## decrypt
 plaintext = int2string(decrypted)
 print (plaintext)
+
+'''
+Bibliography:
+Moodle(2019), rsa.py (online), Secure Communications and Cryptography, Available at: https://moodle.itb.ie/course/view.php?id=1051&section=2 
+(Accessed February 2019). 
+'''
